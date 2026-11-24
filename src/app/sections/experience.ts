@@ -18,8 +18,12 @@ import { RevealDirective } from '../reveal.directive';
               <div class="timeline__text">
                 <h3>{{ i18n.pick(item.title) }}</h3>
                 <p class="timeline__place">{{ i18n.pick(item.place) }}</p>
-                @if (i18n.pick(item.description)) {
-                  <p class="timeline__desc">{{ i18n.pick(item.description) }}</p>
+                @if (item.description.length) {
+                  <ul class="timeline__desc">
+                    @for (point of item.description; track $index) {
+                      <li>{{ i18n.pick(point) }}</li>
+                    }
+                  </ul>
                 }
               </div>
               <span class="timeline__period pixel">{{ i18n.pick(item.period) }}</span>
@@ -65,7 +69,11 @@ import { RevealDirective } from '../reveal.directive';
     }
     .timeline__desc {
       margin: 6px 0 0;
+      padding-left: 18px;
       color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
     .timeline__period {
       font-size: 26px;

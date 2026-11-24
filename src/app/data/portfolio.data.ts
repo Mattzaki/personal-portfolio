@@ -25,7 +25,7 @@ export interface ExperienceItem {
   title: Localized;
   place: Localized;
   period: Localized;
-  description: Localized;
+  description: Localized[];
 }
 
 export const EXPERIENCE: ExperienceItem[] = [
@@ -33,10 +33,24 @@ export const EXPERIENCE: ExperienceItem[] = [
     title: { it: 'Frontend Developer', en: 'Frontend Developer' },
     place: { it: 'Go Project S.r.l., Roma', en: 'Go Project S.r.l., Rome' },
     period: { it: '2024 — oggi', en: '2024 — present' },
-    description: {
-      it: 'Gestionale aziendale in Angular e Ionic, riprogettazione completa di un sito di prenotazioni, portale web per clienti esteri, integrazione di modelli di Intelligenza Artificiale.',
-      en: 'Company management platform in Angular and Ionic, full redesign of a booking website, web portal for international clients, integration of Artificial Intelligence models.',
-    },
+    description: [
+      {
+        it: 'Sviluppo di un gestionale aziendale in Angular e Ionic',
+        en: 'Development of a company management platform in Angular and Ionic',
+      },
+      {
+        it: 'Riprogettazione completa di un sito di prenotazioni',
+        en: 'Full redesign of a booking website',
+      },
+      {
+        it: 'Realizzazione di un portale web per clienti esteri',
+        en: 'Development of a web portal for international clients',
+      },
+      {
+        it: 'Integrazione di modelli di Intelligenza Artificiale',
+        en: 'Integration of Artificial Intelligence models',
+      },
+    ],
   },
   {
     title: {
@@ -48,16 +62,18 @@ export const EXPERIENCE: ExperienceItem[] = [
       en: 'Sapienza University of Rome · taught entirely in English',
     },
     period: { it: '2023 — 2026', en: '2023 — 2026' },
-    description: {
-      it: 'Focus su Intelligenza Artificiale, machine learning e Computer Vision.',
-      en: 'Focus on Artificial Intelligence, machine learning and Computer Vision.',
-    },
+    description: [
+      {
+        it: 'Focus su Intelligenza Artificiale, machine learning e Computer Vision.',
+        en: 'Focus on Artificial Intelligence, machine learning and Computer Vision.',
+      },
+    ],
   },
   {
     title: { it: 'Laurea triennale in Informatica', en: 'Bachelor’s Degree in Computer Science' },
     place: { it: 'Sapienza Università di Roma', en: 'Sapienza University of Rome' },
     period: { it: '2020 — 2023', en: '2020 — 2023' },
-    description: { it: '', en: '' },
+    description: [],
   },
 ];
 
