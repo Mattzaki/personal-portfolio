@@ -31,7 +31,7 @@ import { RevealDirective } from '../reveal.directive';
           >
         </div>
         <p class="contact__copy pixel">
-          © {{ year }} {{ profile.name }} · {{ i18n.t('footer.rights') }}
+          © {{ year }} {{ profile.name }}
         </p>
       </div>
     </footer>

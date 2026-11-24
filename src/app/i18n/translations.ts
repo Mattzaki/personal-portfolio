@@ -43,7 +43,6 @@ const it = {
 
   'contact.title': 'Contattami',
   'contact.text': 'Cerchi un Frontend Developer o vuoi parlare di un progetto? Scrivimi.',
-  'footer.rights': 'Fatto con Angular',
 };
 
 export type TranslationKey = keyof typeof it;
@@ -90,7 +89,6 @@ const en: Record<TranslationKey, string> = {
   'contact.title': 'Get in touch',
   'contact.text':
     'Looking for a Frontend Developer or want to talk about a project? Drop me a line.',
-  'footer.rights': 'Built with Angular',
 };
 
 export const TRANSLATIONS = { it, en } as const;
